@@ -1,16 +1,16 @@
 [
     {
         "title": "Assignment 2: Exploratory Data Analysis",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+        "image": "../static/images/A2/Purchases by Speculative Buyers Over Time.jpg",
+        "description": "An exploratory Data Analysis of Boston Area Property Transaction Data"
     },
     {
-        "title": "Architecto minima sed omnis?",
+        "title": "Assignment 3: Visualization Design",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Est, reiciendis aspernatur debitis maxime et itaque animi sit quod quo, tempore incidunt tempora dignissimos exercitationem enim numquam quam quaerat optio laborum ut unde hic delectus laboriosam? Quasi, cupiditate corporis."
+        "description": "An evolution of visualization design choices from a dataset of U.S. population 1900 to 2000"
     },
     {
-        "title": "Asperiores rem repellendus doloremque.",
+        "title": "Assignment 4: Pursuasive/Deceptive Visualization",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Eligendi tenetur quae quos recusandae est. Cumque, voluptatem. Quo nihil dignissimos molestiae explicabo praesentium aspernatur debitis, illo rerum possimus quam ducimus earum nulla officiis maiores itaque repellat corporis soluta labore?"
     },

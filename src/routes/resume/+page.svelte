@@ -75,8 +75,8 @@
     
     <section>
         <header>
-            <h1>Riccardo's Resume</h1>
-            <img src="images/profile_pic_square.png" class="profile_picture"/>
+            <h1>Amelia's Resume</h1>
+            <img src="images/headshot.jpeg" class="profile_picture"/>
         </header>
     </section>
     <div class="cv">
@@ -84,11 +84,8 @@
             <header>
                 <h2>Personal Information</h2>
             </header>
-            <p>Name: Riccardo</p>
-            <p>Surname: Fiorista</p>
-            <p>Address: 1234 Web Developer Street, 12345, Web City, Webland</p>
-            <p>Phone: 123-456-7890</p>
-            <p>Email: <a href="mailto:fiorista@mit.edu">fiorista@mit.edu</a></p>
+            <p>Name: Amelia Baum</p>
+            <p>Email: <a href="mailto:amelia_b@mit.edu">amelia_b@mit.edu</a></p>
         </section>
         <section>
             <header>
@@ -100,14 +97,11 @@
                 <p>Master of Science in Transportation (MST)</p>
             </article>
             <article>
-                <p><strong>University of Amsterdam</strong></p>
-                <p>Grade: 8.3/10 | High Distinction</p>
-                <p>Master of Science (MSc) in Data Science</p>
-            </article>
-            <article>
-                <p><strong>University of Education</strong></p>
-                <p>Grade: 73/100 | First Class</p>
-                <p>Bachelor of Science (BSc Hons.) in Artificial Intelligence and Computer Science</p>
+                <p><strong>University of California, Berkeley</strong></p>
+                <p>Bachelor of Arts in Urban Studies</p>
+                <p>Graduated: December 2019 | GPA: 3.8 / 4.0</p>
+            <li>City Planning coursework: Urban and Regional Transportation, Data Science for Human Mobility (graduate), Community and Economic Development, Geographic Information Systems, Urban Data Analytics, Economic Analysis</li>
+            <li>Data Science coursework: Data Science, Linear Algebra, Multivariable Calculus, Probability, Machine Learning for Energy and Environment</li>
             </article>
         </section>
         <section>
@@ -115,8 +109,12 @@
                 <h2>Work Experience</h2>
             </header>
             <article>
-                <p><strong>Continuum Industries</strong></p>
-                <p>Software Engineer</p>
+                <h3>Software Engineer - Swiftly, Inc. | January 2020-July 2023</h3>
+                <li>Developed an interactive dashboard and a suite of APIs for transit agencies to analyze their historical vehicle runtimes and optimize their transit schedules.</li>
+                <li>Developed APIs to automate National Transit Database (NTD) reporting and provide a host of service metrics related to service delivery and layover utilization.</li>
+                <li>Improved core prediction and stop arrival/departure detection algorithms, making historical trip data records 30% more complete. </li>
+                <li>Regularly met with key transit agency stakeholders (e.g., WMATA, CTA, SEPTA, LA Metro, MTA Maryland) to understand their needs, develop product requirements, and receive feedback on features in progress. </li>
+                <li>Led the development and maintenance of a business intelligence system to automate data exploration and data health reporting by non-technical team members.</li>
             </article>
         </section>
     </div>

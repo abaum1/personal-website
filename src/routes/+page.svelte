@@ -11,7 +11,7 @@
 
 <h1>Welcome to my page</h1>
 <p>My name is Amelia and I am a Masters of Transportation student.</p>
-<img src="images/sloth.png" alt="Kittens"/>
+<img src="images/sloth.png" alt="a sloth relaxing"/>
 <br/>
 <p>
 		Lorem ipsum dolor sit amet, consectetur 

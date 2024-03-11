@@ -69,11 +69,6 @@ nav a {
   border-bottom-color: oklch(80% 3% 200);
 }
 
-a:hover {
-  border-bottom: 2px solid var(--color-accent);
-  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
-}
-
 form {
   display:grid;
   grid-template-columns: auto 1fr;

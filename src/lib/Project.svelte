@@ -15,9 +15,10 @@
 
 <article>
     <svelte:element this={"h" + hLevel}>{ p.title }</svelte:element>
-    <a href={p.link}><img src={p.image} alt={p.alt}></a>
+    <a href={p.url}>
+        <img src={p.image} alt={p.alt}>
+    </a>
     <p>{p.description}</p>
-    <a href={p.url}><img src={p.url} alt={p.alt}></a>
 </article> 
 
 

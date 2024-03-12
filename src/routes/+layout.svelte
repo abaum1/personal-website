@@ -1,3 +1,5 @@
+
+
 <script>
     let pages = [
         { url: "./", title: "Home" },
@@ -6,16 +8,23 @@
         { url: "./resume", title: "Resume" },
     ];
     import { page } from "$app/stores";
-    let colorScheme = "light dark";
+    let localStorage = globalThis.localStorage ?? {};
+    let colorScheme = localStorage.colorScheme ?? "light dark";
+
+    // let colorScheme = "light dark";
+    $: localStorage.colorScheme = colorScheme;
+
+	let root = globalThis?.document?.documentElement;
+	$: root?.style.setProperty("color-scheme", colorScheme);
+
 </script>
 
 <label class="color-scheme">
     Theme:
-    <select>
+    <select bind:value={colorScheme}>
         <option value="light dark">Auto</option>
         <option value="light">Light</option>
         <option value="dark">Dark</option>
-        bind:value={colorScheme}
     </select>
 </label>
 
@@ -61,10 +70,11 @@
                 canvas 85%
             );
         }
-        .color-scheme {
+        
+    }
+    .color-scheme {
             position: absolute;
             top: 2rem;
             right: 1rem;
         }
-    }
 </style>

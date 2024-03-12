@@ -12,21 +12,21 @@ console.log("IT’S ALIVE!");
 // 	</label>`
 // );
 
-let select = document.querySelector('select');
+// let select = document.querySelector('select');
 
-function setColorScheme(colorScheme) {
-    document.documentElement.style.setProperty("color-scheme", colorScheme);
-}
+// function setColorScheme(colorScheme) {
+//     document.documentElement.style.setProperty("color-scheme", colorScheme);
+// }
 
-select.addEventListener("input", function (event) {
-    localStorage.colorScheme = event.target.value
-    setColorScheme(event.target.value);
-});
+// select.addEventListener("input", function (event) {
+//     localStorage.colorScheme = event.target.value
+//     setColorScheme(event.target.value);
+// });
 
-if ("colorScheme" in localStorage) {
-	select.value = localStorage.colorScheme;
-	setColorScheme(select.value)
-}
+// if ("colorScheme" in localStorage) {
+// 	select.value = localStorage.colorScheme;
+// 	setColorScheme(select.value)
+// }
 
 let form = document.querySelector('form');
 

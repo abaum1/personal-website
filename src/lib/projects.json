@@ -3,17 +3,19 @@
         "title": "Assignment 2: Exploratory Data Analysis",
         "image": "images/A2/Purchases by Speculative Buyers Over Time.jpg",
         "description": "An exploratory Data Analysis of Boston Area Property Transaction Data",
-        "url": "thisisaurl"
+        "url": "./routes/A2"
     },
     {
         "title": "Assignment 3: Visualization Design",
         "image": "images/A3/A3_final_viz.jpg",
-        "description": "An evolution of visualization design choices from a dataset of U.S. population 1900 to 2000"
+        "description": "An evolution of visualization design choices from a dataset of U.S. population 1900 to 2000",
+        "url": "../routes/A3"
     },
     {
         "title": "Assignment 4: Pursuasive/Deceptive Visualization",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Eligendi tenetur quae quos recusandae est. Cumque, voluptatem. Quo nihil dignissimos molestiae explicabo praesentium aspernatur debitis, illo rerum possimus quam ducimus earum nulla officiis maiores itaque repellat corporis soluta labore?"
+        "image": "images/A4/A4_disagree.png",
+        "description": "A comparison of two visualization choices answering two sides of the same claim using NYPD office complaint data.",
+        "url": "./A4"
     },
     {
         "title": "Laudantium reprehenderit placeat perspiciatis.",

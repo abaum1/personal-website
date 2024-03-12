@@ -6,7 +6,18 @@
         { url: "./resume", title: "Resume" },
     ];
     import { page } from "$app/stores";
+    let colorScheme = "light dark";
 </script>
+
+<label class="color-scheme">
+    Theme:
+    <select>
+        <option value="light dark">Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        bind:value={colorScheme}
+    </select>
+</label>
 
 <nav>
     {#each pages as p}
@@ -49,6 +60,11 @@
                 var(--color-accent),
                 canvas 85%
             );
+        }
+        .color-scheme {
+            position: absolute;
+            top: 2rem;
+            right: 1rem;
         }
     }
 </style>

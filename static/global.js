@@ -1,43 +1,16 @@
 console.log("IT’S ALIVE!");
 
-// let pages = [
-// 	{url: "./", title: "Home"},
-//     {url: "resume", title: "Resume"},
-// 	{url: "projects", title: "Projects"},
-// 	{url: "contact", title: "Contact"},
-// ];
 
-// let nav = document.createElement("nav");
-// document.body.prepend(nav);
-
-
-// for (let p of pages) {
-// 	let url = p.url;
-// 	let title = p.title;
-
-//     let a = document.createElement("a");
-//     a.href = url;
-//     a.textContent = title;
-//     nav.append(a);
-
-//     a.classList.toggle("current", a.host === location.host && a.pathname === location.pathname);
-
-//     if (a.host != location.host) {
-// 		a.setAttribute('target', '_blank');
-// 	}
-
-// }
-
-document.body.insertAdjacentHTML("afterbegin", `
-	<label class="color-scheme">
-		Theme:
-		<select>
-        <option value="light dark">Auto</option>
-		<option value="light">Light</option>
-		<option value="dark">Dark</option>
-		</select>
-	</label>`
-);
+// document.body.insertAdjacentHTML("afterbegin", `
+// 	<label class="color-scheme">
+// 		Theme:
+// 		<select>
+//         <option value="light dark">Auto</option>
+// 		<option value="light">Light</option>
+// 		<option value="dark">Dark</option>
+// 		</select>
+// 	</label>`
+// );
 
 let select = document.querySelector('select');
 

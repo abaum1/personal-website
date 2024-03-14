@@ -7,7 +7,6 @@
 	<title>Assignment 4</title>
 </svelte:head>
 
-<body>
 	<header>
 		<h1>
 			<small>Assignment 4: Deceptive Design</small>
@@ -90,5 +89,4 @@
 			</p>
 
 		</section>
-
-</body>
+</main>

@@ -1,14 +1,13 @@
 
 <script>
-    /** @type {import('./$types').PageData} */
-    export let data;
+    // /** @type {import('./$types').PageData} */
+    // export let data;
 </script>
 
 <svelte:head>
 	<title>Assignment 2</title>
 </svelte:head>
 
-<body>
 
 	<header>
 		<h1>
@@ -188,4 +187,3 @@
 				activity is concentrated in those property types. </p>
 		</section>
 	</main>
-</body>

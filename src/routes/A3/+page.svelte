@@ -1,13 +1,12 @@
 <script>
-	/** @type {import('./$types').PageData} */
-	export let data;
+	// /** @type {import('./$types').PageData} */
+	// export let data;
 </script>
 
 <svelte:head>
 	<title>Assignment 3</title>
 </svelte:head>
 
-<body>
 	<header>
 		<h1>Assignment 3 Visualization Design</h1>
 
@@ -210,4 +209,3 @@
 			</p>
 		</section>
 	</main>
-</body>

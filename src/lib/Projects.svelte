@@ -1,6 +1,6 @@
 <script>
     import Project from "$lib/Project.svelte";
-    export let data = []; // Projects list passed in as a prop
+    export let data = []; // Projects list passed in as a prop - don't reimport from projects.json
     export let highlight = 0;
 </script>
 

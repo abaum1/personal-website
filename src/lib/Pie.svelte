@@ -107,7 +107,7 @@
         display: inline-block;
         width: 20px;
         height: 20px;
-        border: 1px solid black;
+        border: 0px solid black;
         margin-right: 5px;
         background-color: var(--color);
     }

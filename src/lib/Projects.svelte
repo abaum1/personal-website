@@ -1,19 +1,20 @@
 <script>
-    import projects from "$lib/projects.json";
     import Project from "$lib/Project.svelte";
-    export let list = []; // Projects list passed in as a prop
+    export let data = []; // Projects list passed in as a prop
     export let highlight = 0;
 </script>
 
 {#if highlight == 1}
     <div class="projects highlights">
-        {#each projects.slice(0, 3) as p}
+        {#each data.slice(0, 3) as p}
             <Project info={p} hLevel="3" />
         {/each}
     </div>
 {:else}
     <div class="projects">
-        {#each projects as p}
+        <!-- specify that the title is the unique identifier so that it filteres on title -->
+        {#each data as p (p.title)} 
+
             <Project info={p} />
         {/each}
     </div>

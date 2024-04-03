@@ -177,27 +177,27 @@
 <h1>Meta</h1>
 
 <dl class="stats">
-    <dt>Total Lines of Code</dt>
-    <dd>{data.length}</dd>
-
-    <dt>Max Depth</dt>
-    <dd>{maxDepth}</dd>
-
-    <dt>Mean Depth</dt>
-    <dd>{meanDepth?.toFixed(1)}</dd>
-
-    <dt>Number of FIles</dt>
-    <dd>{numOfFiles?.toFixed(1)}</dd>
-
-    <dt>Number of Days Worked</dt>
-    <dd>{numDates?.toFixed(1)}</dd>
-
-    <dt>Mean File Length</dt>
-    <dd>{meanFileLength?.toFixed(1)}</dd>
-
-    <dt>Most Common Period</dt>
-    <dd>{maxPeriod}</dd>
-</dl>
+    <dt style="grid-area: header1">Total Lines of Code</dt>
+    <dd style="grid-area: value1">{data.length}</dd>
+  
+    <dt style="grid-area: header2">Max Depth</dt>
+    <dd style="grid-area: value2">{maxDepth}</dd>
+  
+    <dt style="grid-area: header3">Mean Depth</dt>
+    <dd style="grid-area: value3">{meanDepth?.toFixed(1)}</dd>
+  
+    <dt style="grid-area: header4">Number of Files</dt>
+    <dd style="grid-area: value4">{numOfFiles?.toFixed(1)}</dd>
+  
+    <dt style="grid-area: header5">Number of Days Worked</dt>
+    <dd style="grid-area: value5">{numDates?.toFixed(1)}</dd>
+  
+    <dt style="grid-area: header6">Mean File Length</dt>
+    <dd style="grid-area: value6">{meanFileLength?.toFixed(1)}</dd>
+  
+    <dt style="grid-area: header7">Most Common Period</dt>
+    <dd style="grid-area: value7">{maxPeriod}</dd>
+  </dl>
 
 <svg viewBox="0 0 {width} {height}" bind:this={svg}>
     <g transform="translate(0, {usableArea.bottom})" bind:this={xAxis} />
@@ -231,45 +231,73 @@
     style="top: {cursor.y}px; left: {cursor.x}px"
 >
     <dt>Commit</dt>
-    <dd><a href={hoveredCommit.url} target="_blank">{hoveredCommit.id}</a></dd>
+    <dd>
+        <a href={hoveredCommit.url} target="_blank">{hoveredCommit.id}</a>
+    </dd>
 
     <dt>Author</dt>
     <dd>{hoveredCommit.author}</dd>
 
     <dt>Date</dt>
-    <dd>{hoveredCommit.date?.toLocaleDateString("en", { date: "full" })}</dd>
+    <dd>
+        {hoveredCommit.date?.toLocaleDateString("en", { date: "full" })}
+    </dd>
 
     <dt>Time</dt>
-    <dd>{hoveredCommit.time?.toLocaleString("en", { time: "full" })}</dd>
+    <dd>
+        {hoveredCommit.time?.toLocaleString("en", { time: "full" })}
+    </dd>
 
     <dt>Lines</dt>
     <dd>{hoveredCommit.lines?.length}</dd>
 </dl>
 
 <p>{hasSelection ? selectedCommits.length : "No"} commits selected</p>
-{#each languageBreakdown as [language, count]}
+<!-- {#each languageBreakdown as [language, count]}
     <p>{language}: {((count / selectedLines.length) * 100).toFixed(1)}%</p>
-{/each}
+{/each} -->
 
 <Pie data={pieData} bind:selectedIndex={selectedCommentIndex} />
 
 <style>
     .stats {
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        gap: 10px;
+        grid-template-rows: auto auto; /* Two rows, first row auto-sized */
+        grid-template-columns: repeat(7, 1fr); /* 7 columns with equal width */
+        gap: 10px; /* Spacing between grid items */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        margin-bottom: 10px;
     }
 
     .stats dt {
-        grid-column: 1; /* Places all dt in the first column */
-        font-weight: bold; /* Makes dt labels bold */
+        grid-area: header; /* Place all <dt> elements in the 'header' area */
+        font-weight: bold; /* Style the <dt> elements as bold */
+        color: rgb(210, 206, 206)b8b; /* Header color */
+        font-family: 'Roboto', sans-serif;
     }
 
     .stats dd {
-        grid-column: 2; /* Places all dd in the second column */
-        margin: 0;
-        text-align: center; /* Aligns dd values to the right */
+        grid-area: value; /* Place all <dd> elements in the 'value' area */
+        margin: 0; /* Reset default margin */
+        color: #666; /* Value color */
     }
+
+
+    .stats dd {
+        grid-area: value;
+        margin: 0; /* Reset default margin */
+        color: #666; /* Value color */
+    }
+
+    .stats {
+        grid-template-areas:
+            "header1 header2 header3 header4 header5 header6 header7"
+            "value1 value2 value3 value4 value5 value6 value7";
+    }
+
 
     @keyframes marching-ants {
         to {

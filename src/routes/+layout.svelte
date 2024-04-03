@@ -6,6 +6,7 @@
         { url: "./projects", title: "Projects" },
         { url: "./contact", title: "Contact" },
         { url: "./resume", title: "Resume" },
+        { url: "./meta", title: "Meta" },
     ];
     import { page } from "$app/stores";
     let localStorage = globalThis.localStorage ?? {};

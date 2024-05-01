@@ -19,7 +19,7 @@
   let filteredByYear;
   let rolledData;
 
-  $: pieData = rolledData.map(([year, count]) => {
+$: pieData = rolledData.map(([year, count]) => {
       return { value: count, label: year };
     });
 

@@ -126,33 +126,39 @@
     let brushSelection;
 
     function brushed(evt) {
-        brushSelection = evt.selection;
+        let brushSelection = evt.selection;
+        selectedCommits = !brushSelection
+            ? []
+            : commits.filter((commit) => {
+                  let min = {
+                      x: brushSelection[0][0],
+                      y: brushSelection[0][1],
+                  };
+                  let max = {
+                      x: brushSelection[1][0],
+                      y: brushSelection[1][1],
+                  };
+                  let x = xScale(commit.date);
+                  let y = yScale(commit.hourFrac);
+
+                  return x >= min.x && x <= max.x && y >= min.y && y <= max.y;
+              });
     }
 
     function isCommitSelected(commit) {
-        if (!brushSelection) {
-            return false;
-        } else {
-            let min = { x: brushSelection[0][0], y: brushSelection[0][1] };
-            let max = { x: brushSelection[1][0], y: brushSelection[1][1] };
-            let x = xScale(commit.date);
-            let y = yScale(commit.hourFrac);
-            return x >= min.x && x <= max.x && y >= min.y && y <= max.y;
-        }
+        return selectedCommits.includes(commit);
     }
 
     let selectedCommentIndex = -1;
 
-    let selectedCommits,
-        hasSelection,
-        selectedLines,
-        languageBreakdown,
-        pieData;
+    let selectedCommits = []
+
+    let hasSelection, selectedLines, languageBreakdown, pieData;
     $: {
         selectedCommits = brushSelection
             ? commits.filter(isCommitSelected)
             : [];
-        hasSelection = brushSelection && selectedCommits.length > 0;
+        hasSelection = selectedCommits.length > 0;
         selectedLines = (hasSelection ? selectedCommits : commits).flatMap(
             (d) => d.lines,
         );
@@ -179,25 +185,25 @@
 <dl class="stats">
     <dt style="grid-area: header1">Total Lines of Code</dt>
     <dd style="grid-area: value1">{data.length}</dd>
-  
+
     <dt style="grid-area: header2">Max Depth</dt>
     <dd style="grid-area: value2">{maxDepth}</dd>
-  
+
     <dt style="grid-area: header3">Mean Depth</dt>
     <dd style="grid-area: value3">{meanDepth?.toFixed(1)}</dd>
-  
+
     <dt style="grid-area: header4">Number of Files</dt>
     <dd style="grid-area: value4">{numOfFiles?.toFixed(1)}</dd>
-  
+
     <dt style="grid-area: header5">Number of Days Worked</dt>
     <dd style="grid-area: value5">{numDates?.toFixed(1)}</dd>
-  
+
     <dt style="grid-area: header6">Mean File Length</dt>
     <dd style="grid-area: value6">{meanFileLength?.toFixed(1)}</dd>
-  
+
     <dt style="grid-area: header7">Most Common Period</dt>
     <dd style="grid-area: value7">{maxPeriod}</dd>
-  </dl>
+</dl>
 
 <svg viewBox="0 0 {width} {height}" bind:this={svg}>
     <g transform="translate(0, {usableArea.bottom})" bind:this={xAxis} />
@@ -275,8 +281,8 @@
     .stats dt {
         grid-area: header; /* Place all <dt> elements in the 'header' area */
         font-weight: bold; /* Style the <dt> elements as bold */
-        color: rgb(210, 206, 206)b8b; /* Header color */
-        font-family: 'Roboto', sans-serif;
+        color: rgb(210, 206, 206) b8b; /* Header color */
+        font-family: "Roboto", sans-serif;
     }
 
     .stats dd {
@@ -284,7 +290,6 @@
         margin: 0; /* Reset default margin */
         color: #666; /* Value color */
     }
-
 
     .stats dd {
         grid-area: value;
@@ -297,7 +302,6 @@
             "header1 header2 header3 header4 header5 header6 header7"
             "value1 value2 value3 value4 value5 value6 value7";
     }
-
 
     @keyframes marching-ants {
         to {

@@ -22,10 +22,11 @@
         
     },
     {
-        "title": "Laudantium reprehenderit placeat perspiciatis.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "year": "2023",
-        "description": "Quo minus perferendis nulla corrupti repellat dolorem dolore assumenda sit minima ducimus quidem ullam, id ipsa dicta tempora laborum officiis unde possimus cumque nobis alias inventore! Ullam repudiandae iusto nam."
+        "title": "Bikewatching",
+        "image": "images/bikewatching_front_page.png",
+        "year": "2024",
+        "url": "https://abaum1.github.io/bikewatching/",
+        "description": "Lab 8: Bikewatching"
     },
     {
         "title": "Consequuntur autem eos facere.",
